@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const fetch = require('isomorphic-fetch');
 
 const USER_ID = process.env.IDT_USER_ID;
