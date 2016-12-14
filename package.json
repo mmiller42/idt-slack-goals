@@ -2,7 +2,7 @@
   "name": "idt-slack-goals",
   "version": "1.0.0",
   "description": "CLI tool that posts today's IDoneThis goals in Slack",
-  "bin": "./index.js",
+  "bin": "node ./index.js",
   "author": "Matt Miller",
   "license": "MIT",
   "dependencies": {
