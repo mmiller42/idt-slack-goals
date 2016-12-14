@@ -1,0 +1,11 @@
+{
+  "name": "idt",
+  "version": "1.0.0",
+  "description": "CLI tool that posts today's IDoneThis goals in Slack",
+  "bin": "./index.js",
+  "author": "Matt Miller",
+  "license": "MIT",
+  "dependencies": {
+    "isomorphic-fetch": "^2.2.1"
+  }
+}
