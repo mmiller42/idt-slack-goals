@@ -1,5 +1,11 @@
 # idt-slack-goals
-CLI tool that posts today's IDoneThis goals in Slack
+CLI tool for IDoneThis with ability to post your list of goals to Slack.
+
+* List your goals and accomplishments for today
+* Post your list of goals on Slack
+* Add a new goal for today
+* Add a new accomplishment for today
+* Mark an existing goal for today as complete
 
 ## Installation
 ```sh
@@ -21,7 +27,9 @@ Define the following environment variables in your shell profile.
 In order to obtain your team ID in IDoneThis:
 
 1. Log into IDoneThis.
+
 1. You should be directed to a screen where you can see your and your teammates' tasks.
+
 1. Your team ID is the last parameter in the URL.
 
    For example, if the URL is:
@@ -37,8 +45,11 @@ In order to obtain your team ID in IDoneThis:
 In order to obtain your user ID in IDoneThis:
 
 1. Log into IDoneThis.
+
 1. You should be directed to a screen where you can see your and your teammates' tasks.
+
 1. Click on your avatar to visit your profile.
+
 1. Your user ID is the last parameter in the URL.
 
    For example, if the URL is:
@@ -51,11 +62,14 @@ In order to obtain your user ID in IDoneThis:
 
 ### `IDT_TOKEN`
 
-To obtain your IDoneThis API key:
+To obtain your IDoneThis API token:
 
 1. Log into IDoneThis.
+
 1. Click *Account settings* in the navigation on the left.
+
 1. Scroll to the *API Token* section.
+
 1. Note the API token in the box.
 
 ### `IDT_SLACK_HOOK`
@@ -63,9 +77,13 @@ To obtain your IDoneThis API key:
 To obtain a Slack WebHook URL:
 
 1. Log into the Slack web interface.
+
 1. Visit the [Incoming WebHooks](https://brightbytes.slack.com/apps/A0F7XDUAZ-incoming-webhooks) app page.
+
 1. Click _Add Configuration_.
+
 1. Choose a channel to post your IDoneThis update into.
+
 1. Your Slack hook will be the part of the *Webhook URL* **after** `https://hooks.slack.com/services/`.
 
    For example, if your Webhook URL is:
@@ -90,6 +108,12 @@ The examples below will assume you are using the alias; if not, replace `idt` wi
 
 ```sh
 idt list
+```
+
+### Post your list of goals on Slack
+
+```sh
+idt slack
 ```
 
 ### Add a goal
