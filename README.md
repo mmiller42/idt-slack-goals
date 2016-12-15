@@ -15,14 +15,7 @@ npm install -g idt-slack-goals
 ## Environment Setup
 Define the following environment variables in your shell profile.
 
-| Variable         | Description                                           |
-| ---------------- | ----------------------------------------------------- |
-| `IDT_TEAM_ID`    | Your team's ID in IDoneThis.                          |
-| `IDT_USER_ID`    | Your user ID in IDoneThis.                            |
-| `IDT_TOKEN`      | Your IDoneThis API token.                             |
-| `IDT_SLACK_HOOK` | The part of your Slack Webhook URL after `services/`. |
-
-### `IDT_TEAM_ID`
+##### `IDT_TEAM_ID`
 
 In order to obtain your team ID in IDoneThis:
 
@@ -39,8 +32,8 @@ In order to obtain your team ID in IDoneThis:
    ```
    
    Then your team ID is `123456789`.
-   
-### `IDT_USER_ID`
+
+##### `IDT_USER_ID`
 
 In order to obtain your user ID in IDoneThis:
 
@@ -60,7 +53,7 @@ In order to obtain your user ID in IDoneThis:
 
    Then your user ID is `987654321`.
 
-### `IDT_TOKEN`
+##### `IDT_TOKEN`
 
 To obtain your IDoneThis API token:
 
@@ -72,7 +65,7 @@ To obtain your IDoneThis API token:
 
 1. Note the API token in the box.
 
-### `IDT_SLACK_HOOK`
+##### `IDT_SLACK_HOOK`
 
 To obtain a Slack WebHook URL:
 
@@ -118,15 +111,11 @@ idt slack
 
 ### Add a goal
 
-Provide the CLI with a string that describes your goal.
-
 ```sh
 idt goal 'Write unit tests'
 ```
 
 ### Add a task you've already completed
-
-Provide the CLI with a string that describes the task you completed.
 
 ```sh
 idt done 'Fixed bug on autocomplete widget'
@@ -134,7 +123,7 @@ idt done 'Fixed bug on autocomplete widget'
 
 ### Mark an existing task as completed
 
-Provide the CLI with a search phrase. It will locate the first goal for today that contains the given string and mark it as completed.
+This will locate the first goal for today that contains the given string and mark it as completed.
 
 ```sh
 idt complete 'unit test'
