@@ -1,6 +1,6 @@
 {
   "name": "idt-slack-goals",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "CLI tool for IDoneThis with ability to post your list of goals to Slack.",
   "bin": "./lib/scripts/index.js",
   "repository": {
@@ -19,7 +19,6 @@
     "url": "https://github.com/mmiller42/idt-slack-goals/issues"
   },
   "homepage": "https://github.com/mmiller42/idt-slack-goals/",
-  "license": "MIT",
   "dependencies": {
     "commander": "^2.9.0",
     "emojis": "^1.0.9",
