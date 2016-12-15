@@ -63,7 +63,7 @@ To obtain your IDoneThis API token:
 
 1. Scroll to the *API Token* section.
 
-1. Note the API token in the box.
+1. Your API token appears in a text field.
 
 ##### `IDT_SLACK_HOOK`
 
