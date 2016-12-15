@@ -11,18 +11,35 @@ Define the following environment variables in your shell profile.
 
 | Variable         | Description                                           |
 | ---------------- | ----------------------------------------------------- |
+| `IDT_TEAM_ID`    | Your team's ID in IDoneThis.                          |
 | `IDT_USER_ID`    | Your user ID in IDoneThis.                            |
-| `IDT_API_KEY`    | Your IDoneThis API token.                             |
-| `IDT_SLACK_HOOK` | The part of your Slack WebHook URL after `services/`. |
+| `IDT_TOKEN`      | Your IDoneThis API token.                             |
+| `IDT_SLACK_HOOK` | The part of your Slack Webhook URL after `services/`. |
 
+### `IDT_TEAM_ID`
+
+In order to obtain your team ID in IDoneThis:
+
+1. Log into IDoneThis.
+1. You should be directed to a screen where you can see your and your teammates' tasks.
+1. Your team ID is the last parameter in the URL.
+
+   For example, if the URL is:
+   
+   ```
+   https://beta.idonethis.com/t/123456789
+   ```
+   
+   Then your team ID is `123456789`.
+   
 ### `IDT_USER_ID`
 
 In order to obtain your user ID in IDoneThis:
 
 1. Log into IDoneThis.
-1. Visit the homepage for your team via the navigation on the left.
-1. You should see a list of avatars at the bottom with everyone on your team, with your avatar first.
-1. Click your avatar to visit your profile. Your user ID is the last parameter in the URL.
+1. You should be directed to a screen where you can see your and your teammates' tasks.
+1. Click on your avatar to visit your profile.
+1. Your user ID is the last parameter in the URL.
 
    For example, if the URL is:
 
@@ -32,7 +49,7 @@ In order to obtain your user ID in IDoneThis:
 
    Then your user ID is `987654321`.
 
-### `IDT_API_KEY`
+### `IDT_TOKEN`
 
 To obtain your IDoneThis API key:
 
@@ -49,12 +66,52 @@ To obtain a Slack WebHook URL:
 1. Visit the [Incoming WebHooks](https://brightbytes.slack.com/apps/A0F7XDUAZ-incoming-webhooks) app page.
 1. Click _Add Configuration_.
 1. Choose a channel to post your IDoneThis update into.
-1. Note the part of the *Webhook URL* **after** `https://hooks.slack.com/services/`.
+1. Your Slack hook will be the part of the *Webhook URL* **after** `https://hooks.slack.com/services/`.
+
+   For example, if your Webhook URL is:
+   
+   ```
+   https://hooks.slack.com/services/ABCD123456/DEFG789012/HIJK345678
+   ```
+
+   Then your Slack hook is `ABCD123456/DEFG789012/HIJK345678`.
 
 ## Usage
 
-Run this command from your shell to post today's IDT goals in the Slack channel:
+For brevity, you may want to add this to your shell profile:
 
 ```sh
-idt-slack-goals
+alias idt="idt-slack-goals"
+```
+
+The examples below will assume you are using the alias; if not, replace `idt` with `idt-slack-goals`.
+
+### List all goals and accomplishments
+
+```sh
+idt list
+```
+
+### Add a goal
+
+Provide the CLI with a string that describes your goal.
+
+```sh
+idt goal 'Write unit tests'
+```
+
+### Add a task you've already completed
+
+Provide the CLI with a string that describes the task you completed.
+
+```sh
+idt done 'Fixed bug on autocomplete widget'
+```
+
+### Mark an existing task as completed
+
+Provide the CLI with a search phrase. It will locate the first goal for today that contains the given string and mark it as completed.
+
+```sh
+idt complete 'unit test'
 ```
