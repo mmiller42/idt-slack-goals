@@ -1,6 +1,6 @@
 {
   "name": "idt-slack-goals",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "CLI tool for IDoneThis with ability to post your list of goals to Slack.",
   "bin": "./lib/scripts/index.js",
   "author": "Matt Miller",
