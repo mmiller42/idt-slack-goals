@@ -1,11 +1,68 @@
 # idt-slack-goals
 CLI tool for IDoneThis with ability to post your list of goals to Slack.
 
-* List your goals and accomplishments for today
-* Post your list of goals on Slack
-* Add a new goal for today
-* Add a new accomplishment for today
-* Mark an existing goal for today as complete
+```
+>  idt --help
+
+  Usage: idt-slack-goals [options] [command]
+
+  Commands:
+
+    complete <search>  Marks the first goal matched by the search as complete.
+    done <entry>       Adds an item to your list of accomplishments in IDoneThis.
+    goal <entry>       Adds an item to your list of goals in IDoneThis.
+    slack              Posts your list of IDoneThis goals for today in Slack.
+    list               Lists your goals and accomplishments in IDoneThis for today.
+
+  Options:
+
+    -h, --help     output usage information
+    -V, --version  output the version number
+
+>  idt goal 'Standup'
+◻️  Standup
+
+>  idt goal 'Sync up with Jordan re bug'
+◻️  Sync up with Jordan re bug
+◻️  Standup
+
+>  idt goal 'Review all assigned PRs'
+◻️  Review all assigned PRs
+◻️  Sync up with Jordan re bug
+◻️  Standup
+
+>  idt goal 'Refactor repo'
+◻️  Refactor repo
+◻️  Review all assigned PRs
+◻️  Sync up with Jordan re bug
+◻️  Standup
+
+>  idt list
+◻️  Refactor repo
+◻️  Review all assigned PRs
+◻️  Sync up with Jordan re bug
+◻️  Standup
+
+>  idt complete 'jordan'
+◻️  Refactor repo
+◻️  Review all assigned PRs
+☑️  Sync up Jordan re bug
+◻️  Standup
+
+>  idt done 'Make coffee'
+☑️  Make coffee
+◻️  Refactor repo
+◻️  Review all assigned PRs
+☑️  Sync up Jordan re bug
+◻️  Standup
+
+>  idt slack
+☑️  Make coffee
+◻️  Refactor repo
+◻️  Review all assigned PRs
+☑️  Sync up Jordan re bug
+◻️  Standup
+```
 
 ## Installation
 ```sh
