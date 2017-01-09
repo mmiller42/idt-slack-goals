@@ -1,4 +1,5 @@
 # idt-slack-goals
+
 CLI tool for IDoneThis with ability to post your list of goals to Slack.
 
 ```
@@ -11,7 +12,7 @@ CLI tool for IDoneThis with ability to post your list of goals to Slack.
     complete <search>  Marks the first goal matched by the search as complete.
     done <entry>       Adds an item to your list of accomplishments in IDoneThis.
     goal <entry>       Adds an item to your list of goals in IDoneThis.
-    slack              Posts your list of IDoneThis goals for today in Slack.
+    slack [type]       Posts your list of IDoneThis goals for today in Slack.
     list               Lists your goals and accomplishments in IDoneThis for today.
 
   Options:
@@ -156,23 +157,39 @@ The examples below will assume you are using the alias; if not, replace `idt` wi
 
 ### List all goals and accomplishments
 
+This will print all incomplete goals as well as entries you've accomplished today to the console.
+
 ```sh
 idt list
 ```
 
-### Post your list of goals on Slack
+### Post your list of goals and accomplishments on Slack
+
+This will post your goals and accomplishments in Slack.
 
 ```sh
 idt slack
 ```
 
+### Post only goals on Slack
+
+You may pass `goal` or `done` to the Slack command to only post goals or accomplishments in the Slack channel, respectively.
+
+```sh
+idt slack goal
+```
+
 ### Add a goal
+
+Add a goal for today.
 
 ```sh
 idt goal 'Write unit tests'
 ```
 
 ### Add a task you've already completed
+
+Add an entry that is already done.
 
 ```sh
 idt done 'Fixed bug on autocomplete widget'
